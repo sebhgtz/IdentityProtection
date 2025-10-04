@@ -1,15 +1,23 @@
 {
   "manifest_version": 3,
-  "name": "My First Extension",
+  "name": "Identity Protection Agent",
   "version": "1.0",
-  "description": "This is my first Chrome extension!",
+  "description": "Identity protection!",
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "Interface.html",
     "default_icon": {
-      "16": "icon16.jpg"
+      "16": "Icon.png",
+      "48": "Icon.png",
+      "128": "Icon.png"
     }
   },
   "permissions": [
     "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
   ]
 }
