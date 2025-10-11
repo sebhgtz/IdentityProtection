@@ -15,7 +15,7 @@ function checkIfPassword(typed)  {
         if (/\d/.test(word)) {
             if (/[A-Z]/.test(word)) {
                 alert("You may have typed a sensitive password - "+ word)
-                true
+                return true
             }
         }
     }
@@ -23,7 +23,7 @@ function checkIfPassword(typed)  {
     return false
 }
 
-const keywords = {"personal-password":"123456", "personal-email":"Rafayel.latif@gmail.com", "api_key":"apikey"}
+const keywords = {"personal-password":"123456", "personal-email":"rafayel.latif@gmail.com", "api_key":"apikey"}
 // document.addEventListener("input", (event)=>{
 //     const target = event.target
 //     checkIfPassword(target.value)
@@ -39,7 +39,7 @@ document.addEventListener("keydown", (event) => {
         }
         return; // ignore special keys like Shift, Ctrl, etc.
     }
-    previously_typed += event.key.toLowerCase()
+    previously_typed += event.key
     if (previously_typed.length > 50) {
         previously_typed = previously_typed.slice(-50) // keep only the last 50 characters
     }
