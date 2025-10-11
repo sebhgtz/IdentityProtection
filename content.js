@@ -15,13 +15,20 @@ function checkIfPassword(typed)  {
         if (/\d/.test(word)) {
             if (/[A-Z]/.test(word)) {
                 alert("You may have typed a sensitive password - "+ word)
-                return true
+                true
             }
         }
     }
 
     return false
 }
+
+const keywords = {"personal-password":"123456", "personal-email":"Rafayel.latif@gmail.com", "api_key":"apikey"}
+// document.addEventListener("input", (event)=>{
+//     const target = event.target
+//     checkIfPassword(target.value)
+
+// })
 
 previously_typed = ""
 document.addEventListener("keydown", (event) => {
