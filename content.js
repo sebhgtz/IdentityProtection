@@ -23,7 +23,7 @@ function checkIfPassword(typed)  {
     return false
 }
 
-const keywords = {"personal-password":"123456", "personal-email":"rafayel.latif@gmail.com", "api_key":"apikey"}
+const keywords = {"personal-password":"123456", "personal-email":"rafayel.latif@gmail.com", "api_key":"apikey","/home/sebhernandez/","/Users/sebhernandez/"}
 // document.addEventListener("input", (event)=>{
 //     const target = event.target
 //     checkIfPassword(target.value)
